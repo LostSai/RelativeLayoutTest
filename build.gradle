@@ -1,0 +1,30 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        maven { url 'http://10.103.4.47:8081/repository/maven-public/' }
+        maven {
+            // 4399 SDK 开放仓库：正式
+            url 'https://mvn.4399doc.com/repository/maven-releases'
+        }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.1.1"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url 'http://10.103.4.47:8081/repository/maven-public/' }
+        maven {
+            // 4399 SDK 开放仓库：正式
+            url 'https://mvn.4399doc.com/repository/maven-releases'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
